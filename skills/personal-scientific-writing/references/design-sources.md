@@ -1,0 +1,11 @@
+# Design sources
+
+This personal skill is an original synthesis of the user's requirements and selected workflow concepts. It does not bundle upstream code or reproduce their manuals. The following sources informed the design and remain optional reading, not runtime dependencies.
+
+- [Nature-Paper-Skills: claim-source-verification](https://github.com/Boom5426/Nature-Paper-Skills/blob/main/skills/core/claim-source-verification/SKILL.md): distinguish a real reference from evidence supporting the actual claim. This personal skill accepts evidence in figures and tables and does not require separate agents, a rejection quota, or verbatim quotation for every claim.
+- [AIScientists: academic-humanizer](https://github.com/AIScientists-Dev/academic-humanizer/blob/main/SKILL.md): preserve scientific qualification and technical meaning during style revision. This personal skill uses the user's moderate punctuation preference rather than banning every dash; unsupported claims are removed rather than merely softened.
+- [msimchowitz: academic-voice](https://github.com/msimchowitz/writing-skills/blob/main/for-agents/academic-voice/SKILL.md): distinguish evidence, interpretation, and conjecture and write connected explanations. This personal skill does not add personal opinions or speculative interpretations to the manuscript.
+- [APA Style: author–date system](https://apastyle.apa.org/style-grammar-guidelines/citations/basic-principles/author-date) and [journal-article references](https://apastyle.apa.org/style-grammar-guidelines/references/examples/journal-article-references): authoritative style destinations. Their content was not fully retrievable in the creation session; accessible Purdue OWL guidance informed the concise APA reminders.
+- [Purdue OWL: Author/Authors](https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_formatting_and_style_guide/in_text_citations_author_authors.html) and [Articles in Periodicals](https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_formatting_and_style_guide/reference_list_articles_in_periodicals.html): accessible APA 7 citation and reference guidance.
+
+The user's six requirements govern conflicts with stylistic preferences in the GitHub sources. This skill imposes no fixed paragraph count, no arbitrary whole-manuscript citation quota, and no external-service dependency.

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Personal Scientific Writing"
+  short_description: "Clear Methods and Results with verified scientific evidence"
+  default_prompt: "Use $personal-scientific-writing to draft or revise this manuscript using verified evidence, purposeful equations, finalized figures and source data, and my preferred citation style."

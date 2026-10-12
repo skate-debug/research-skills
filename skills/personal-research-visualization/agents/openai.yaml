@@ -1,0 +1,7 @@
+interface:
+  display_name: "Research Visualization"
+  short_description: "Compact scientific figures and complete panel source data"
+  brand_color: "#276B80"
+  default_prompt: "Use $personal-research-visualization to create or revise compact publication-quality figures, review every panel for redundancy, and provide complete source data using my approved layout and palette."
+policy:
+  allow_implicit_invocation: true
