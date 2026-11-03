@@ -1,6 +1,6 @@
 ---
 name: personal-research-visualization
-description: "Design, revise or audit publication-quality scientific figures with compact interconnected panels, minimal text, diverse justified encodings and complete source data. Use for manuscript figures, sampling maps, analytical workflows, networks and trees, including semantic duplication reviews. Not for business dashboards or decorative illustrations."
+description: "Design, revise or audit publication-quality scientific figures with compact interconnected panels, minimal text, diverse justified encodings and complete source data. Use for manuscript figures, sampling maps, analytical workflows, networks and trees, including semantic duplication reviews, redesigns that keep the data unchanged and the adoption of approved figures into a manuscript. Not for business dashboards or decorative illustrations."
 ---
 
 # Personal research visualization
@@ -20,7 +20,7 @@ A requested study map plus workflow is an appropriate contextual Figure: it comm
 - For each proposed panel, identify its scientific question, source, analytical unit, visual encoding, and unique contribution. Reject panels that repeat another panel or only restate one number.
 - Identify actual sample sizes, missingness, repeated measures, transformations, and inference limits. Use stable identifiers for joins. Preserve original data and previous figure versions.
 - Revisions authorize the requested figure work, not new statistical analyses, rerunning pipelines, or changing the study's conclusions. Ask only when an unresolved choice materially changes scientific meaning.
-- For multipanel planning, substantial revisions, source-data releases or duplication audits, read [Multipanel revisions and source data](references/multipanel-and-source-data.md).
+- For multipanel planning, substantial revisions, redesigns, source-data releases or duplication audits, read [Multipanel revisions and source data](references/multipanel-and-source-data.md).
 
 ## Choose encodings honestly
 
@@ -46,6 +46,22 @@ Line charts and bars remain appropriate when they best answer a nontrivial quest
 - Use compact horizontal, vertical or mixed arrangements according to the data and reference figure. Reduce unused margins, align axes and matrix tracks, bring trees close to their associated heatmaps, and keep arrows, legends and labels inside the intended frame. Landscape orientation is a preference when it improves the composition, not a requirement to compress every figure.
 - Inspect at intended publication size, not only enlarged on screen. Treat small map credits and compact legends as real typography that must remain readable.
 
+## Redesigns and added panels
+
+- A redesign changes how the data are encoded, not only where panels sit; re-laying the same plots is not a redesign. When the data are to stay unchanged, keep every value, sample and analysis and change the form.
+- Prototype one figure in the new style, obtain the author's approval, then carry the same visual language to the other figures one at a time. Reuse approved panel code, for example by running the approved script without its export step, so approved panels stay identical.
+- Make a figure fuller by promoting completed analyses that so far appear only in tables or text. Place each new panel beside the result it qualifies: a robustness check beside the effect, a decomposition beside the association, a sensitivity run beside the main analysis. Never repeat data shown elsewhere, and never run a new analysis only to fill space.
+- Keep one visual language across the set: context drawn pale and receding so that data marks dominate; ink for all text, with identity colours carried by marks and small swatches; continuous zones as gradient bands rather than boxes; key values printed on or beside their glyphs; one symbol and colour per site, station or group in every figure; keys placed in empty space inside the panel area.
+- Prefer split distributions with the observations and joined means when two groups share an axis, draw a sensitivity run as paired marks in the same panel (filled for the main analysis, open for the sensitivity run), draw a null-model range as a band behind the observed values, and nest a subdivision inside its existing glyph instead of adding a separate bar chart.
+- Keep a record of forms the author has removed, and do not bring them back in a later redesign.
+
+## Adopting approved figures
+
+- Rewrite each caption for the marks actually drawn, and delete descriptions of marks that moved or disappeared.
+- Update every panel reference in the main text, supplement and table titles, including captions that say a panel is drawn as in another figure whose form has changed.
+- Report in the text every result that a new panel shows, with the values the panel draws, and give every plotted value a source table, sensitivity runs included. Recheck the rounding of each number that enters the text.
+- Preserve the previous build, rebuild the manuscript, and inspect each figure at its placed size.
+
 ## Reproducibility and export
 
 - Build data plots, maps, and workflows with deterministic scientific plotting or editable vector tools. Do not use generative imagery to fabricate measurements, geographic features, trees, or analytical relationships.
@@ -57,7 +73,7 @@ Line charts and bars remain appropriate when they best answer a nontrivial quest
 
 ## Final review
 
-Check source-to-mark accuracy, sample and edge counts, grouping/order, units, missingness, scale bars, dependency arrows, and absence of fabricated significance. Render the actual deliverable; inspect all panels for overlap, clipping, legibility, color ambiguity, and unnecessary text. Verify physical dimensions, pixel dimensions, DPI metadata, and successful opening of exports. Report unresolved limitations without claiming journal acceptance or universal publication readiness.
+Check source-to-mark accuracy, sample and edge counts, grouping/order, units, missingness, scale bars, dependency arrows, and absence of fabricated significance. Where possible, assert these in the plotting script so that the build stops instead of drawing a wrong value. Render the actual deliverable; inspect all panels for overlap, clipping, legibility, color ambiguity, and unnecessary text. Verify physical dimensions, pixel dimensions, DPI metadata, and successful opening of exports. Report unresolved limitations without claiming journal acceptance or universal publication readiness.
 
 Review duplication across the whole main and supplementary set using scientific questions, source records, transformations and encodings. Pixel similarity alone cannot identify semantic duplication. Record intentional shared information and each panel's distinct role; remove or consolidate repeated displays that make the same point. Check that main findings, sensitivity analyses and detailed source tables form a coherent, qualified narrative.
 
