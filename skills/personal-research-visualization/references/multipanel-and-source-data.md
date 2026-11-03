@@ -22,6 +22,14 @@ Ordination improvements may use clear marker fills/outlines, shape redundancy, z
 
 Palette changes and layout changes are separate edits. Preserve an approved composition during a palette-only revision, and preserve an approved palette during a layout-only revision. Use compatible categorical and continuous scales with explicit meanings. Avoid unnecessary brown or other dominant tones when the author prefers a restrained alternative; do not turn that project preference into a universal colour ban.
 
+## Redesigning an approved set
+
+Redesign with unchanged data means new encodings for the same values, samples and analyses. Start from the figure the author likes best, extract the elements they approved, and apply them to the other figures one at a time, each as a prototype for approval. Read approved panels from their own scripts rather than redrawing them, and check that the adopted output is identical to the approved prototype.
+
+When an author asks for fuller figures, list the completed results that exist only in tables or text: robustness checks, decompositions, sensitivity runs, null models and finer resolutions of a displayed group. Promote those that qualify a displayed result, and place them in the same figure beside that result. A subdivision of a displayed group, such as genera within a family, can be drawn inside the existing glyph, with the parts checked to add up to the whole. A sensitivity run is clearest as paired marks in the same panel, so that the reader sees how far the result moves.
+
+Track removed forms across rounds. If the author once removed a chart type for a purpose, a later redesign must find another form for that purpose.
+
 ## Semantic duplication
 
 Audit the entire main and supplementary set, including internal subplots within a lettered panel. Compare question, source records, model/procedure, aggregation, transformation and visual encoding.
@@ -48,6 +56,18 @@ Large matrices may use complete compressed TSV companions alongside Excel summar
 Captions must explain the final marks actually present: colours, shapes, outlines, scales, thresholds, transformations, denominators, averaging, uncertainty and omitted/missing values. Define biological annotations and computational procedures at the level needed to interpret them. Describe descriptive ranges as ranges, not confidence intervals, and conditional ranks as ranks unless an inferential test was performed.
 
 Check confirmed chemistry units and nutrient mass bases across all figures and source dictionaries. Label pairwise quantities whose pairs share samples, evaluations of the same cohort under multiple schemes, candidate host evidence and study-wide references accurately. Preserve negative or inconvenient controls and qualified conclusions.
+
+## Build-time checks and rendering
+
+Assert in the plotting script that the plotted values equal their source tables, so that the build stops instead of drawing a wrong value. Useful assertions cover totals, shares that sum to 100%, parts that sum to their whole, means that equal the tabulated values, and samples or pairs that must survive every join.
+
+Limit the view, not the data. Axis limits that discard out-of-range observations silently change summaries, densities and smoothers (in ggplot2, set limits in `coord_cartesian()` rather than in the scales), so treat warnings about removed rows as errors. Confirm that every mark is drawn, because a mark given no outline colour can be treated as missing and dropped.
+
+Check special characters such as Greek letters, true minus signs and superscripts in every export format, because a PDF font encoding can lose glyphs that the raster output shows. Check that printed numbers keep their stated precision (0.90, not 0.9). Inspect fine separators at the final raster resolution, because thin white gaps between very small segments can wash out the marks they separate.
+
+## Adoption into a manuscript
+
+When the author approves a figure, move it into the release folder under its final name and keep the prototype for the record. Rewrite the caption for the final marks, update panel references in the text, supplement and table titles, and look for captions elsewhere that describe a panel by reference to one whose form has changed. Every result a new panel shows should be reported in the text with the same values, and every plotted value, including those of sensitivity runs, should have a source table. Rebuild the manuscript from its sources, keep the previous build, and inspect each figure on its page.
 
 ## Revision and delivery
 
