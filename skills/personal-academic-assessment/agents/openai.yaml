@@ -1,0 +1,6 @@
+interface:
+  display_name: "Academic Assessment"
+  short_description: "Choose and stress-test a paper's research question"
+  default_prompt: "Use $personal-academic-assessment to judge which research question this data set can carry, audit its novelty and priority, and give an honest venue verdict."
+policy:
+  allow_implicit_invocation: true
